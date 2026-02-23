@@ -2123,3 +2123,45 @@ http://www.tooplate.com/view/2098-health
 .contact-info a:hover {
     text-decoration: underline;
 }
+
+
+
+
+/* ===== Floating Appointment Button ===== */
+.floating-appointment{
+    position:fixed;
+    bottom:20px;
+    right:85px;
+    background:#00bcd4;
+    color:#fff;
+    padding:15px 22px;
+    border-radius:50px;
+    font-weight:bold;
+    text-decoration:none;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    z-index:999;
+    transition:0.3s;
+}
+
+.floating-appointment:hover{
+    background:#0097a7;
+}
+
+
+/* ===== Mobile Size ===== */
+@media (max-width:768px){
+
+    #lang-switch{
+        padding:8px 14px;
+        font-size:12px;
+        bottom:75px;
+        right:15px;
+    }
+
+    .floating-appointment{
+        padding:10px 16px;
+        font-size:12px;
+        bottom:15px;
+        right:15px;
+    }
+}
