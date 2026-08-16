@@ -147,11 +147,24 @@
         const toggle = document.getElementById("whatsappToggle");
         const menu = document.getElementById("whatsappMenu");
 
+        // Show immediately
+        menu.style.display = "block";
+
+        // Automatically show/hide every 5 seconds
+        setInterval(function () {
+            menu.style.display =
+                menu.style.display === "block" ? "none" : "block";
+        }, 5000);
+
+        // Allow manual click
         toggle.addEventListener("click", function (e) {
             e.stopPropagation();
-            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+
+            menu.style.display =
+                menu.style.display === "block" ? "none" : "block";
         });
 
+        // Close when clicking elsewhere
         document.addEventListener("click", function () {
             menu.style.display = "none";
         });
